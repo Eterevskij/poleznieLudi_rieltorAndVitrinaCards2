@@ -1,38 +1,390 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+  background: #f4f4f4 !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.realtorsCards {
+  font-family: Inter;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1, h2, h3, h4, h5, h6, p {
+  margin-bottom: 0 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1312px;
+  margin: 0 auto;
+}
+
+/* .ShowcaseAdvertisement__list__item__left {
+  width: 392px;
+} */
+
+.sliderBTNWrapper {
+  z-index: 10;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.sliderBTNWrapper>span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sliderBTNWrapper.left {
+  left: 12px;
+}
+
+.sliderBTNWrapper.right {
+  right: 12px;
+}
+
+.ShowcaseAdvertisement__list__item {
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #EDEDED;
+  border-radius: 12px;
+}
+
+.ant-carousel {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.carouselSlide {
+  border-radius: 12px;
+}
+
+.carouselSlide img {
+  width: 100%;
+  height: 100%;
+}
+
+.slick-dots.slick-dots-bottom, .sliderBTNWrapper {
+  opacity: 0;
+  transition: 0.2s opacity ease;
+}
+
+.ant-carousel:hover .slick-dots.slick-dots-bottom {
+  opacity: 1;
+}
+
+.ant-carousel:hover .sliderBTNWrapper {
+  opacity: 1;
+}
+
+.ShowcaseAdvertisement__list__item__right {
+  margin-left: 32px;
+}
+
+.ShowcaseAdvertisement__list__item__right__categories {
+  margin-top: 12px;
+
+}
+
+.ShowcaseAdvertisement__list__item__right__categories__item {
+  color: #2b2b2b;
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #F4F4F4;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.ShowcaseAdvertisement__list__item__right__title {
+  color: #2b2b2b;
+  font-size: 20px;
+}
+
+.ShowcaseAdvertisement__list__item__right__location {
+  margin-top: 12px;
+  color: #4f4f4f;
+}
+
+.ShowcaseAdvertisement__list__item__right>.ant-row {
+  height: 100%;
+}
+
+.ShowcaseAdvertisement__list__item__right__priceAndContacts__price {
+  font-size: 32px;
+  color: #2b2b2b;
+  font-weight: 600;
+  line-height: 42px;
+}
+
+.ShowcaseAdvertisement__list__item__right__priceAndContacts__price__wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ShowcaseAdvertisement__list__item__right__priceAndContacts__priceForSqrM {
+  margin-left: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ShowcaseAdvertisement__list__item__right__priceAndContacts__priceForSqrM {
+  color: #4f4f4f;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ShowcaseAdvertisement__list__item__right__contacts {
+  margin-top: 24px;
+  width: 100%;
+  border-radius: 12px;
+  background: #F4F4F4;
+  padding: 8px 16px;
+}
+
+.ShowcaseAdvertisement__list__item__right__priceAndContacts__wrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.ShowcaseAdvertisement__list__item__right__feedbackAndContacts__phone {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ShowcaseAdvertisement__list__item__right__feedbackAndContacts__addToFavourite {
+  cursor: pointer;
+  padding: 11px;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.ShowcaseAdvertisement__list__item__right__feedbackAndContacts__addToFavourite svg {
+  width: 17px;
+  height: 17px;
+  color: #7A7A7A;
+}
+
+.ShowcaseAdvertisement__list__item__right__feedbackAndContacts__phone {
+  min-width: 177px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 24px;
+  margin-left: 16px;
+  background: #4DB663;
+}
+
+.ShowcaseAdvertisement__list__item__right__feedbackAndContacts__phone.text {
+  cursor: pointer;
+  color: #fff;
+}
+
+.ShowcaseAdvertisement__list__item__right__feedbackAndContacts__phone.phone {
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid #4DB663;
+  color: #2B2B2B;
+}
+
+.anticon.anticon-heart.active svg {
+  color: #F44F5A !important;
+}
+
+.ShowcaseAdvertisement__list__item__right__feedbackAndContacts__phone.phone a {
+  color: #2B2B2B;
+}
+
+.anticon.anticon-heart svg {
+  transition: color 0.1s ease;
+}
+
+.ShowcaseAdvertisement__list__item__right__contacts__nameAndDate {
+  margin-left: 16px;
+}
+
+.ShowcaseAdvertisement__list__item__right__contacts__nameAndDate__name {
+  color: #2b2b2b;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.ShowcaseAdvertisement__list__item__right__contacts__nameAndDate__date {
+  margin-top: 5px;
+  color: #4f4f4f;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.ShowcaseAdvertisement__list__item__right__contacts.mobile {
+  display: none;
+}
+
+.ShowcaseAdvertisement__list__item__wrapper {
+  flex-wrap: nowrap;
+}
+
+.ShowcaseAdvertisement__list__item .slick-dots.slick-dots-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.ant-carousel .slick-dots li {
+  width: 40px !important;
+}
+
+.ShowcaseAdvertisement__list__item+.ShowcaseAdvertisement__list__item {
+  margin-top: 24px;
+}
+
+@media (max-width: 1280px) {
+
+  .ShowcaseAdvertisement__list__item__right__title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .ShowcaseAdvertisement__list__item__right__location {
+    margin-top: 8px;
+    font-size: 14px;
   }
+
+  .ShowcaseAdvertisement__list__item__right__categories {
+    margin-top: 8px;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__categories__item {
+    padding: 2px 8px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__priceAndContacts__price {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31px;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__contacts {
+    margin-top: 8px;
+  }
+
+  .ShowcaseAdvertisement__list__item {
+    padding: 24px;
+  }
+
+  /* .ShowcaseAdvertisement__list__item__left {
+    max-width: 324px;
+  } */
+
+  .ShowcaseAdvertisement__list__item__right {
+    margin-left: 24px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .ShowcaseAdvertisement__list__item__right__contacts.desktop {
+    display: none;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__categories {
+    margin-top: 16px;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__contacts.mobile {
+    flex-wrap: nowrap;
+    margin-top: 24px;
+    display: block;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .slick-dots.slick-dots-bottom {
+    opacity: 1;
+  }
+
+  .sliderBTNWrapper {
+    display: none;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .ShowcaseAdvertisement__list__item__wrapper {
+    flex-wrap: wrap;
+  }
+
+  .ShowcaseAdvertisement__list__item__left {
+    max-width: auto;
+  }
+
+  .ShowcaseAdvertisement__list__item__left  {
+    min-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .ShowcaseAdvertisement__list__item__right {
+    margin-left: 0;
+  } 
+  
+  .ShowcaseAdvertisement__list__item__right {
+    margin-top: 16px;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__priceAndContacts__wrapper {
+    position: static;
+    margin-top: 32px;
+  }
+
+}
+
+@media (max-width: 510px) {
+
+  .ShowcaseAdvertisement__list__item__right__contacts.mobile {
+    flex-wrap: wrap;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__feedbackAndContacts__wrapper {
+    margin-top: 16px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .ShowcaseAdvertisement__list__item__right__contacts.mobile {
+    margin-top: 12px;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .ShowcaseAdvertisement__list__item__right__categories {
+    display: none;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__contacts.mobile {
+    display: none;
+  }
+
 }
