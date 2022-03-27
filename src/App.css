@@ -4,7 +4,7 @@ body {
   background: #f4f4f4 !important;
 }
 
-.realtorsCards {
+.ShowcaseAdvertisement {
   font-family: Inter;
 }
 
@@ -22,10 +22,6 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 1312px;
   margin: 0 auto;
 }
-
-/* .ShowcaseAdvertisement__list__item__left {
-  width: 392px;
-} */
 
 .sliderBTNWrapper {
   z-index: 10;
@@ -327,7 +323,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 
   .ShowcaseAdvertisement__list__item__wrapper {
     flex-wrap: wrap;
