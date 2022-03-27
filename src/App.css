@@ -246,6 +246,10 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 24px;
 }
 
+.ShowcaseAdvertisement__list__item__right__contacts.mobile .ant-row {
+  flex-wrap: nowrap;
+}
+
 @media (max-width: 1280px) {
 
   .ShowcaseAdvertisement__list__item__right__title {
@@ -353,7 +357,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 }
 
-@media (max-width: 510px) {
+@media (max-width: 530px) {
 
   .ShowcaseAdvertisement__list__item__right__contacts.mobile {
     flex-wrap: wrap;
@@ -361,6 +365,18 @@ h1, h2, h3, h4, h5, h6, p {
 
   .ShowcaseAdvertisement__list__item__right__feedbackAndContacts__wrapper {
     margin-top: 16px;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__feedbackAndContacts__wrapper {
+    width: 100%;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__feedbackAndContacts__phone {
+    display: block;
+  }
+
+  .ShowcaseAdvertisement__list__item__right__contacts.mobile .ant-row {
+    flex-wrap: wrap;
   }
 
 }

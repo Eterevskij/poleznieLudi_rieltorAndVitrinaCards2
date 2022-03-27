@@ -1,5 +1,5 @@
 import { React, useState, useRef } from 'react';
-import { Row, Col, Carousel } from 'antd';
+import { Row, Col, Carousel, Button } from 'antd';
 import 'antd/dist/antd.css';
 
 import { LeftOutlined, RightOutlined, HeartFilled } from '@ant-design/icons';
@@ -41,6 +41,7 @@ const ShowcaseAdvertisementItem = (props) => {
 
     return (
         <div className="ShowcaseAdvertisement__list__item">
+
             <Row className='ShowcaseAdvertisement__list__item__wrapper'>
 
                 <Col xl={8} lg={10} md={12} sm={12} xs={12} className='ShowcaseAdvertisement__list__item__left'>
@@ -164,9 +165,9 @@ const ShowcaseAdvertisementItem = (props) => {
 
                     <Col className='ShowcaseAdvertisement__list__item__right__feedbackAndContacts__wrapper'>
                         <Row align='middle' wrap={false} justify="end" >
-                            <Col><div onClick={() => setLike(!isLikeActive)} className="ShowcaseAdvertisement__list__item__right__feedbackAndContacts__addToFavourite"><HeartFilled className={isLikeActive ? 'active' : ''} /></div></Col>
+                            <Col> <div onClick={() => setLike(!isLikeActive)} className="ShowcaseAdvertisement__list__item__right__feedbackAndContacts__addToFavourite"><HeartFilled className={isLikeActive ? 'active' : ''} /></div></Col>
 
-                            <Col flex="auto">
+                            <Col className='ShowcaseAdvertisement__list__item__right__feedbackAndContacts__phone__wrapper' flex="auto">
                                 <span onClick={() => setShow(true)} className={`ShowcaseAdvertisement__list__item__right__feedbackAndContacts__phone ${isPhoneChown ? 'phone' : 'text'}`}>{isPhoneChown ? <a href={`tel:${phone.compressed}`}>{phone.expanded}</a> : 'Показать телефон'}</span>
                             </Col>
                         </Row>
